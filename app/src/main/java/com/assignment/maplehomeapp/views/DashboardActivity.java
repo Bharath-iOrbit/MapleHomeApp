@@ -189,21 +189,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 //                intent = new Intent(DashboardActivity.this, VoidingDiaryActivity.class);
 //                startActivity(intent);
 //                break;
-//            case R.id.kegel_img:
-//                intent = new Intent(DashboardActivity.this, KegelActivity.class);
-//                startActivity(intent);
-//                break;
-//            case R.id.pft_img:
-//                intent = new Intent(DashboardActivity.this, MeetPFTActivity.class);
-//                startActivity(intent);
-//                break;
-//            case R.id.sync_data_img:
-//                Toast.makeText(this, "Fetching data...", Toast.LENGTH_SHORT).show();
-//
-//                communicator.checkPrescriptionUpdate(prefs.getString("patientID",""));
-//                intent = new Intent(DashboardActivity.this, SyncDataActivity.class);
-//                startActivity(intent);
-            //   break;
         }
 
     }
