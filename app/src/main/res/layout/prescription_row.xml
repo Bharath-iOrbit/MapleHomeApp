@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:orientation="horizontal"
+    android:background="@drawable/cardview"
+
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/row_linear"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:layout_weight="0.75"
+        android:orientation="vertical"
+        android:weightSum="5.5">
+
+        <TextView
+            android:id="@+id/pres_date"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="Prescription Date"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pres_note"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:padding="2dp"
+            android:text="Prescription note"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pres_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="Prescription id"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/therapist_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="Therapist id"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/num_records"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="Number of Records"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_weight="0.25"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Status"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:id="@+id/session_status"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"></TextView>
+        <ProgressBar
+            android:id="@+id/session_completed"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/circular_progress_pending"
+            android:secondaryProgress="100" />
+    </LinearLayout>
+</LinearLayout>

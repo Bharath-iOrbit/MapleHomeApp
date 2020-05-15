@@ -1,0 +1,4 @@
+include ':app', ':bluetooth'
+rootProject.name='MapleHomeApp'
+//include ':Android-nRF-UART-master'
+//project(':Android-nRF-UART-master').projectDir = new File('/home/ubuntu/AndroidStudioProjects')

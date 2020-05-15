@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/dashboard_top">
+
+            <Button
+                android:id="@+id/connectDevice"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/connection_point"
+                android:textColor="@color/blue_dash" />
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/connectDevice"
+                android:layout_marginLeft="5dp"
+                android:text="Not connected" />
+
+
+            <RelativeLayout
+                android:id="@+id/shape_layout"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle">
+
+                <ImageView
+
+                    android:id="@+id/profilepic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dependent" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shape_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:text="Merly Davidson"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/logout_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@+id/shape_layout"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginBottom="39dp"
+                app:srcCompat="@drawable/log_out" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/undraw_medicine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/es_session_rl"
+                android:layout_width="138dp"
+                android:layout_height="160dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/relt"
+                app:layout_constraintBottom_toTopOf="@+id/guideline7"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/guideline">
+
+                <ImageView
+                    android:id="@+id/es_session_imgt"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:padding="7dp"
+                    android:src="@drawable/es_session"
+                    app:layout_constraintVertical_bias="0.2" />
+
+                <TextView
+                    android:id="@+id/es_session_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/es_session_imgt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/essesion"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/es_history_rl"
+                android:layout_width="138dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/relt"
+                app:layout_constraintBottom_toTopOf="@+id/guideline7"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/guideline">
+
+                <ImageView
+                    android:id="@+id/es_history_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:padding="7dp"
+                    android:src="@drawable/es_history" />
+
+                <TextView
+                    android:id="@+id/es_history_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/es_history_img"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/eshistory"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/es_measurement_rl"
+            android:layout_width="138dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/relt"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <ImageView
+                android:id="@+id/es_measurement_imgt"
+                android:layout_width="57dp"
+                android:layout_height="59dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_healthcare_and_medical"
+                app:layout_constraintVertical_bias="0.2" />
+
+            <TextView
+                android:id="@+id/es_measurement_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/es_measurement_imgt"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/esmeasuremnt"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>

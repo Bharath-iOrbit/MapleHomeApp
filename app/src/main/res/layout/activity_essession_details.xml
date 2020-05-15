@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".views.ESSessionDetails">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.019">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:id="@+id/status_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:id="@+id/session_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/calendar" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Date"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/dateTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/access_time" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Duration"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/duration_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/power" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Current"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/current_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/cached" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Cycles"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/cycles_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/heart" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Pulse width"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/pulse_width"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:weightSum="1"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/electrode" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Electrode Configuration"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/enf_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/heart" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Fade In Out"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/offset"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:weightSum="1"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/electrode" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="Delay Time"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/delayTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="start"
+                    android:text="Default Date"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+
+            android:id="@+id/det_run_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Next"
+            android:layout_marginBottom="2dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

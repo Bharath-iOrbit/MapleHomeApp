@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#E9E3E3</color>
+    <color name="txtbackg">#FFE9E3E3</color>
+    <color name="cardview_bg">#756D6D</color>
+    <color name="green">#18801C</color>
+    <color name="dimgreen">#B2ECB5</color>
+    <color name="red">#DD1818</color>
+    <color name="blue">#2E3192</color>
+    <color name="blue_dash">#374CC2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_blue">#399DEC</color>
+    <color name="black">#000000</color>
+    <color name="grey">#AFACAC</color>
+    <color name="deep_blue">#080075</color>
+    <color name="deep_sky_blue">#3498db</color>
+    <color name="greenish_teal">#2ecc71</color>
+    <color name="tomato_red">#e74c3c</color>
+    <color name="light_gray">#f6f6f6</color>
+    <color name="pause">#184D70</color>
+    <color name="dimpause">#59A6D8</color>
+
+</resources>

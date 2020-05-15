@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:layout_gravity="center_horizontal"
+    android:fitsSystemWindows="true">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_green_light"
+    android:padding="20dp">
+
+
+    <EditText
+        android:id="@+id/setElectrodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:inputType="number"
+        android:padding="10dp"
+        android:hint="Electrodes" />
+
+    <EditText
+        android:id="@+id/setStimulationFrequency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="StimulationFrequency" />
+
+    <EditText
+        android:id="@+id/setStimulationCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:hint="StimulationCurrent" />
+
+    <EditText
+        android:id="@+id/setPulsePhaseDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:inputType="textPersonName"
+        android:hint="PulsePhaseDuration" />
+
+    <EditText
+        android:id="@+id/setHoldTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:inputType="textPersonName"
+        android:hint="HoldTime" />
+
+
+
+    <EditText
+        android:id="@+id/setDelayTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:inputType="textPersonName"
+        android:hint="DelayTime" />
+
+
+
+
+    <EditText
+        android:id="@+id/setFadeTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:inputType="textPersonName"
+        android:hint="FadeTime" />
+
+
+
+
+    <EditText
+        android:id="@+id/setRepititionCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:inputType="textPersonName"
+        android:hint="RepititionCount" />
+
+    <Button
+        android:id="@+id/stimulate"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Send" />
+
+
+</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:text="Audio"
+            android:textStyle="bold" />
+
+        <Switch
+            android:textOff="Off"
+            android:textOn="On"
+            android:id="@+id/audioSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="100dp"
+            android:layout_weight="0.5"
+            android:checked="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:text="Live/Debug"
+            android:textStyle="bold" />
+
+        <Switch
+            android:textOff="Off"
+            android:textOn="On"
+            android:id="@+id/livedebugSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="100dp"
+            android:layout_weight="0.5"
+            android:checked="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>
