@@ -79,6 +79,11 @@ public class ESMeasurementActivity extends AppCompatActivity {
 //
         // attaching data adapter to spinner
         spinner_type.setAdapter(dataAdaptertype);
+
+
+
+
+
 //        textview_increment.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
