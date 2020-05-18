@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_weight="1"
+    android:orientation="vertical"
     tools:context=".views.ESMeasurementActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -14,161 +14,501 @@
         android:layout_height="wrap_content"
         android:elevation="4dp"
         android:gravity="center">
+
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white_two">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="5sp"
+            android:text="Measurement Settings"
+            android:textColor="#858585"
+            android:textSize="13sp"
+            android:textStyle="normal"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/linearlyout_details">
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="left"
+            android:lineSpacingExtra="5sp"
+            android:text="Location"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_weight="2"
             android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
+
+            <RadioButton
+                android:layout_width="212dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/black"
+                android:buttonTint="@color/radiobutton"
+                android:text="Vaginal"
                 android:textStyle="bold"
-                android:textSize="15dp"
-                android:text="Location:"/>
-            <Spinner
+                android:textSize="16sp" />
+
+            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner_location"
                 android:layout_weight="1"
-                />
+                android:buttonTint="@color/radiobutton"
+                android:textStyle="bold"
+                android:text="Anal"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="2"
             android:orientation="horizontal">
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="5sp"
+                android:text="Measurement Type"
                 android:textStyle="bold"
-                android:textSize="15dp"
-                android:text="Measurement type:"/>
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
             <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/spinner_type"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="5sp"
+                android:text="No. Contractions"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/pluse_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_increment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_increment_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#d3d3d3"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="5sp"
+                android:text="Contraction active period (s)"
+                android:textColor="#000000"
+
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/pluse_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_increment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_increment_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#d3d3d3"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="5sp"
+                android:text="Contraction rest period (s)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/pluse_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_increment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_increment_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#d3d3d3"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white_two">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="5sp"
+                android:text="Display Settings Graph"
+                android:textColor="#858585"
+                android:textSize="13sp"
+                android:textStyle="normal"
+
                 />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:weightSum="100"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="15dp"
-                android:layout_weight="60"
-                android:text="Measurement duration(m):"/>
-            <TextView
-                android:layout_width="0dp"
-                android:id="@+id/textview_increment_decrement"
-                android:text="1"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="15"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:id="@+id/textview_increment"
-                android:text="+"
-                android:layout_weight="12"
-                android:textColor="@color/black"
-                android:background="#d3d3d3"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16dp"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="0dp"
-                android:id="@+id/textview_decrement"
-                android:text="-"
-                android:layout_weight="12"
-                android:textColor="@color/black"
-                android:background="#d3d3d3"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16dp"
-                android:layout_height="wrap_content"/>
 
         </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:weightSum="100"
             android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="15dp"
-                android:layout_weight="60"
-                android:text="Contraction active period(s):"/>
-            <TextView
-                android:layout_width="0dp"
-                android:id="@+id/textview_increment_decrement_contraction"
-                android:text="1"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="15"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"/>
 
             <TextView
-                android:layout_width="0dp"
-                android:id="@+id/textview_increment_contraction"
-                android:text="+"
-                android:layout_weight="12"
-                android:textColor="@color/black"
-                android:background="#d3d3d3"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16dp"
-                android:layout_height="wrap_content"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="5sp"
+                android:text="EMG sensitivity (uV)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/pluse_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_increment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_increment_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#d3d3d3"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
             <TextView
-                android:layout_width="0dp"
-                android:id="@+id/textview_decrement_contraction"
-                android:text="-"
-                android:layout_weight="12"
-                android:textColor="@color/black"
-                android:background="#d3d3d3"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16dp"
-                android:layout_height="wrap_content"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="5sp"
+                android:text="EMG Timespan (s)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/pluse_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_increment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_increment_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#d3d3d3"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_decrement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/radiobutton"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="5sp"
+                android:text="EMG Reference Line"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Switch" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
 
     </LinearLayout>
-
 
 </LinearLayout>

@@ -36,6 +36,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -67,7 +68,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     Communicator communicator;
     private SharedPreferences prefs;
     Button connectButton;
-    RelativeLayout esSessionRl, esHistoryRl,esMeasurementRL;
+    RelativeLayout esSessionRl, esHistoryRl;
+    LinearLayout es_measurement_li;
 
     private BluetoothDevice mDevice = null;
     private BluetoothAdapter mBtAdapter = null;
@@ -125,26 +127,27 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         esSessionImg = (ImageView) findViewById(R.id.es_session_imgt);
         esHistoryImg = (ImageView) findViewById(R.id.es_history_img);
-        esMeasurementImg =(ImageView) findViewById(R.id.es_measurement_imgt);
+//        esMeasurementImg =(ImageView) findViewById(R.id.es_measurement_imgt);
         userName = (TextView) findViewById(R.id.user_name);
         connectButton = (Button) findViewById(R.id.connectDevice);
         logOutBtn = (ImageView) findViewById(R.id.logout_btn);
         esHistoryRl = (RelativeLayout) findViewById(R.id.es_history_rl);
         esSessionRl = (RelativeLayout) findViewById(R.id.es_session_rl);
-        esMeasurementRL=(RelativeLayout)findViewById(R.id.es_measurement_rl);
+        es_measurement_li = (LinearLayout) findViewById(R.id.es_measurement_li);
         userName.setText(patientName);
 
         esHistoryRl.setOnClickListener(this);
         esSessionRl.setOnClickListener(this);
         connectButton.setOnClickListener(this);
         logOutBtn.setOnClickListener(this);
+        es_measurement_li.setOnClickListener(this);
 //        voidingDiaryImg = (ImageView) findViewById(R.id.voiding_diary_img);
 //        kegelImg = (ImageView) findViewById(R.id.kegel_img);
 //        meetPFTImg = (ImageView) findViewById(R.id.pft_img);
 //        syncDataImg = (ImageView) findViewById(R.id.sync_data_img);
         esSessionImg.setOnClickListener(this);
         esHistoryImg.setOnClickListener(this);
-        esMeasurementImg.setOnClickListener(this);
+//        esMeasurementImg.setOnClickListener(this);
 //        voidingDiaryImg.setOnClickListener(this);
 //        kegelImg.setOnClickListener(this);
 //        meetPFTImg.setOnClickListener(this);
@@ -163,7 +166,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(intent);
                 break;
             case R.id.es_measurement_imgt:
-            case R.id.es_measurement_rl:
+            case R.id.es_measurement_li:
                 intent = new Intent(DashboardActivity.this, ESMeasurementActivity.class);
                 startActivity(intent);
                 break;
